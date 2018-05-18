@@ -8,7 +8,7 @@ module.exports.run = async (bot, message, args) => {
     return message.reply("You don't have any coins!")
   }
 
-  let pUser = message.mentions.users.first());
+  let pUser = message.mentions.users.first();
 
   if(!coins[pUser.id]){
     coins[pUser.id] = {
