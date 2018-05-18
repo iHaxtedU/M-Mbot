@@ -27,25 +27,22 @@ bot.on("ready", async () => {
   console.log(`${bot.user.username} is online on ${bot.guilds.size} servers!`);
 
   bot.user.setActivity("With M&M's", {type: "PLAYING"});
-  
-  let start = new Discord.RichEmbed()
-  .setAuthor(bot.user.username, bot.user.avatarURL)
-  .setDescription("Successfully Restarted!");
-  
-  bot.channels.find('name', "general").send(start);
-
 });
 
 bot.on("message", async message => {
   if(message.author.bot) return;
   if(message.channel.type === "dm") return;
 
-
-
   let prefix = botconfig.prefix;
   let messageArray = message.content.split(" ");
   let cmd = messageArray[0];
   let args = messageArray.slice(1);
+  
+    let start = new Discord.RichEmbed()
+  .setAuthor(bot.user.username, bot.user.avatarURL)
+  .setDescription("Successfully Restarted!");
+  
+  bot.channels.find('name', "general").send(start);
 
   let commandfile = bot.commands.get(cmd.slice(prefix.length));
   if(commandfile) commandfile.run(bot,message,args);
