@@ -10,6 +10,7 @@ module.exports.run = async (bot, message, args) => {
 
   let pUser = message.mentions.users.first();
   if (!pUser) return message.channel.send("Please Specify A User")
+  if pUser.id = message.author.id return message.channel.send("Nope");
 
   if(!bal[pUser.id]){
     bal[pUser.id] = {
