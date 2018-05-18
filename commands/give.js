@@ -4,7 +4,7 @@ let bal = require("../m&m's.json");
 
 module.exports.run = async (bot, message, args) => {
   
-  if (message.author.hasPermission("ADMINISTRATOR")) return message.channel.send("You Need Permission To Do This");
+  if (message.author.hasPermissions("ADMINISTRATOR")) return message.channel.send("You Need Permission To Do This");
 
   let pUser = message.mentions.users.first();
   if (!pUser) return message.channel.send("Please Specify A User")
