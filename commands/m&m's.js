@@ -9,6 +9,13 @@ module.exports.run = async (bot, message, args) => {
   }
 
   let uCoins = bal[message.author.id].bal;
+  
+  let infinite = new Discord.RichEmbed()
+  .setAuthor(bot.user.username, bot.user.avatarURL)
+  .setColor("#00FF00")
+  .addField("You Have", "∞ M&M's");
+  
+  if (uCoins < 100000) return message.channel.send(infinite);
 
 
   let coinEmbed = new Discord.RichEmbed()
