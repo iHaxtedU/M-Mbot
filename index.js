@@ -24,13 +24,6 @@ fs.readdir("./commands/", (err, files) => {
 
 
 bot.on("ready", async () => {
-  let startc = new Discord.RichEmbed()
-  .setAuthor(bot.user.username, bot.user.avatarURL)
-  .setDescription("Successfully Restarted!");
-  
-  let toSend = bot.channels.find('name', "general");
-  toSend.send(startc);
-  
   console.log(`${bot.user.username} is online on ${bot.guilds.size} servers!`);
 
   bot.user.setActivity("With M&M's", {type: "PLAYING"});
