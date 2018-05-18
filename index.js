@@ -3,6 +3,7 @@ const Discord = require("discord.js");
 const fs = require("fs");
 const bot = new Discord.Client({disableEveryone: true});
 bot.commands = new Discord.Collection();
+const bal = require("./m&m's.json");
 
 fs.readdir("./commands/", (err, files) => {
 
@@ -37,6 +38,12 @@ bot.user.setActivity("Getting Updated", {type: "PLAYING"});
 bot.on("message", async message => {
   if(message.author.bot) return;
   if(message.channel.type === "dm") return;
+  
+  if(!bal[message.author.id]){
+  bal[message.author.id] = {
+    coins: 0
+  };
+}
 
   let prefix = botconfig.prefix;
   let messageArray = message.content.split(" ");
