@@ -6,7 +6,10 @@ let help = new Discord.RichEmbed()
 .setThumbnail(message.author.avatarURL)
 .setColor("#3afff8")
 .setDescription("~Here Are All The Commands~")
-.addField("!ping", "Used To Check The Response Time On The Bot");
+.addField("!ping", "Used To Check The Response Time On The Bot")
+.addField("!bal", "Check How Many M&M's You Have")
+.addField("!pay (USER) (AMT)", "Use This Command To Pay Someone M&M's")
+.addField("!contact", "Admins Can Use This To Contact Someone Using The Bot");
 
 message.channel.send(help);
 }
