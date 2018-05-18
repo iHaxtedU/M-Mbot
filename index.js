@@ -29,7 +29,7 @@ let restart = new Discord.RichEmbed()
 .setAuthor(bot.user.username, bot.user.avatarURL)
 .setDescription("Bot Successfully Restarted!");
   
-bot.channels.find("name", "bot").send(restart);
+bot.channels.find("name", "chat").send(restart);
   
 bot.user.setActivity("Getting Updated", {type: "PLAYING"});
 });
