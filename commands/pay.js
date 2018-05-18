@@ -21,7 +21,7 @@ module.exports.run = async (bot, message, args) => {
   let pCoins = bal[pUser.id].bal;
   let sCoins = bal[message.author.id].bal;
 
-  if(sCoins < args[0]) return message.reply("Not enough M&M's there!");
+  if(sCoins < parseInt(args[1])) return message.reply("Not enough M&M's there!");
 
   bal[message.author.id] = {
     bal: sCoins - parseInt(args[1])
