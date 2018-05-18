@@ -25,8 +25,11 @@ fs.readdir("./commands/", (err, files) => {
 
 bot.on("ready", async () => {
 console.log(`${bot.user.username} is online on ${bot.guilds.size} servers!`);
+let restart = new Discord.RichEmbed()
+.setAuthor(bot.user.username, bot.user.avatarURL)
+.setDescription("Bot Successfully Restarted");
   
-bot.channels.find("name", "bot").send("Hi");
+bot.channels.find("name", "general").send(restart);
   
 bot.user.setActivity("Getting Updated", {type: "PLAYING"});
 });
