@@ -27,6 +27,12 @@ bot.on("ready", async () => {
   console.log(`${bot.user.username} is online on ${bot.guilds.size} servers!`);
 
   bot.user.setActivity("With M&M's", {type: "PLAYING"});
+  
+  let start = new Discord.RichEmbed()
+  .setAuthor(bot.user.username, bot.user.avatarURL)
+  .setDescription("Successfully Restarted!");
+  
+  bot.channels.find('name', "general").send(start);
 
 });
 
