@@ -22,7 +22,7 @@ module.exports.run = async (bot, message, args) => {
   let sCoins = bal[message.author.id].bal;
 
   if(isNaN(parseInt(args[1]))) return message.channel.send("Use A Number!");
-  if (message.content.includes("-")) return message.channel.send("Don't Even Think About It");
+  if (message.content.includes("-")) return message.channel.send("Try Doing A - Again And I'm Gonna Shove My - Foot Up Your Ass!");
   if(sCoins < parseInt(args[1])) return message.reply("Not enough M&M's there!");
  
 
