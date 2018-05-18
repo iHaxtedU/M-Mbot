@@ -21,6 +21,8 @@ module.exports.run = async (bot, message, args) => {
   let pCoins = bal[pUser.id].bal;
   let sCoins = bal[message.author.id].bal;
 
+  if(isNaN(parseInt(args[1]))) return message.channel.send("Use A Number")
+
   if(sCoins < parseInt(args[1])) return message.reply("Not enough M&M's there!");
 
   bal[message.author.id] = {
