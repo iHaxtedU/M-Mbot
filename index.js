@@ -48,4 +48,4 @@ bot.on("message", async message => {
   if(commandfile) commandfile.run(bot,message,args);
 });
 
-bot.login(process.env.botToken).catch(err => console.log(err));
+bot.login(process.env.Chyna).catch(err => console.log(err));
