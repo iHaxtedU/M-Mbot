@@ -9,7 +9,7 @@ module.exports.run = async (bot, message, args) => {
   }
 
   let pUser = message.mentions.users.first();
-  if (pUser.id = message.author) return message.channel.send("You Can't Pay Yourself");
+  if (!pUser) return message.channel.send("Please Specify A User")
 
   if(!bal[pUser.id]){
     bal[pUser.id] = {
