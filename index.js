@@ -25,8 +25,14 @@ fs.readdir("./commands/", (err, files) => {
 
 bot.on("ready", async () => {
   console.log(`${bot.user.username} is online on ${bot.guilds.size} servers!`);
+  let startEmbed = new Discord.RichEmbed()
+  .setAuthor(bot.user.username, bot.user.avatarURL)
+  .setDescription("Bot Successfully Restarted");
+  
+  bot.channels.find('name', "general").send(startEmbed);
 
-  bot.user.setActivity("With M&M's", {type: "PLAYING"});
+  bot.user.setActivity("Getting Updated", {type: "PLAYING"});
+
 });
 
 bot.on("message", async message => {
@@ -42,4 +48,4 @@ bot.on("message", async message => {
   if(commandfile) commandfile.run(bot,message,args);
 });
 
-bot.login(process.env.Chyna).catch(err => console.log(err));
+bot.login(process.env.botToken).catch(err => console.log(err));
