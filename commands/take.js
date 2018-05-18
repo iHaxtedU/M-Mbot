@@ -25,7 +25,7 @@ if(!message.member.hasPermission("ADMINISTRATOR")) return message.channel.send("
      bal: pCoins - parseInt(args[1])
   };
 
-  message.channel.send(`${message.author} has given ${pUser} ${args[1]} M&M's.`);
+  message.channel.send(`${message.author} has taken ${pUser} ${args[1]} M&M's.`);
 
   fs.writeFile("./m&m's.json", JSON.stringify(bal), (err) => {
     if(err) cosole.log(err)
@@ -35,5 +35,5 @@ if(!message.member.hasPermission("ADMINISTRATOR")) return message.channel.send("
 }
 
 module.exports.help = {
-  name: "give"
+  name: "take"
 }
