@@ -4,7 +4,7 @@ let bal = require("../m&m's.json");
 module.exports.run = async (bot, message, args) => {
   if(!bal[message.author.id]){
     bal[message.author.id] = {
-      coins: 0
+      bal: 150
     };
   }
 
