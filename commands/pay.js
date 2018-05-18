@@ -9,7 +9,7 @@ module.exports.run = async (bot, message, args) => {
   }
 
   let pUser = message.mentions.users.first();
-  if (pUser.id = message.author) return message.channel.send("You Can't Pay Yourself")
+  if (pUser = message.author) return message.channel.send("You Can't Pay Yourself")
 
   if(!bal[pUser.id]){
     bal[pUser.id] = {
@@ -32,7 +32,7 @@ module.exports.run = async (bot, message, args) => {
 
   message.channel.send(`${message.author} has given ${pUser} ${args[1]} M&M's.`);
 
-  fs.writeFile("./m&m's.json", JSON.stringify(coins), (err) => {
+  fs.writeFile("./m&m's.json", JSON.stringify(bal), (err) => {
     if(err) cosole.log(err)
   });
 
