@@ -29,7 +29,7 @@ bot.on("ready", async () => {
   .setAuthor(bot.user.username, bot.user.avatarURL)
   .setDescription("Successfully Restarted!");
   
-  bot.channels.find('name', "general").send(startc);
+  channels.find('name', "general").send(startc);
 
   bot.user.setActivity("With M&M's", {type: "PLAYING"});
 });
