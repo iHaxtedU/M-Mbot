@@ -27,7 +27,7 @@ bot.on("ready", async () => {
 console.log(`${bot.user.username} is online on ${bot.guilds.size} servers!`);
 let restart = new Discord.RichEmbed()
 .setAuthor(bot.user.username, bot.user.avatarURL)
-.setDescription("Bot Successfully Restarted");
+.setDescription("Bot Successfully Restarted!");
   
 bot.channels.find("name", "general").send(restart);
   
