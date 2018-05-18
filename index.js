@@ -30,7 +30,8 @@ console.log(`${bot.user.username} is online on ${bot.guilds.size} servers!`);
 .setAuthor(bot.user.username, bot.user.avatarURL)
 .setDescription("Bot Successfully Restarted");
   
-bot.channels.find('name', "chat").send(startEmbed);
+let tosend = bot.channels.find('name', "general");
+tosend.send(startEmbed);
   
 bot.user.setActivity("Getting Updated", {type: "PLAYING"});
 });
