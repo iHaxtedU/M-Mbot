@@ -25,6 +25,11 @@ fs.readdir("./commands/", (err, files) => {
 
 bot.on("ready", async () => {
   console.log(`${bot.user.username} is online on ${bot.guilds.size} servers!`);
+   let startc = new Discord.RichEmbed()
+  .setAuthor(bot.user.username, bot.user.avatarURL)
+  .setDescription("Successfully Restarted!");
+  
+  bot.channels.find('name', "general").send(startc);
 
   bot.user.setActivity("With M&M's", {type: "PLAYING"});
 });
@@ -37,12 +42,6 @@ bot.on("message", async message => {
   let messageArray = message.content.split(" ");
   let cmd = messageArray[0];
   let args = messageArray.slice(1);
-  
-    let start = new Discord.RichEmbed()
-  .setAuthor(bot.user.username, bot.user.avatarURL)
-  .setDescription("Successfully Restarted!");
-  
-  bot.channels.find('name', "general").send(start);
 
   let commandfile = bot.commands.get(cmd.slice(prefix.length));
   if(commandfile) commandfile.run(bot,message,args);
