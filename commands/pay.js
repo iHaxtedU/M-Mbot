@@ -23,6 +23,7 @@ module.exports.run = async (bot, message, args) => {
 
   if(isNaN(parseInt(args[1]))) return message.channel.send("Use A Number!");
   if (message.content.includes("-")) return message.channel.send("Try Doing A Negative Again And I'm Gonna Shove My Negative Foot Up Your Ass!");
+  if (message.content.includes(".")) return message.channel.send("Ok I Know Your On Your Period, But None Of That Here!");
   if(sCoins < parseInt(args[1])) return message.reply("Not enough M&M's there!");
  
 
