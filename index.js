@@ -41,7 +41,7 @@ bot.on("message", async message => {
   
   if(!bal[message.author.id]){
   bal[message.author.id] = {
-    coins: 0
+    coins: 150
   };
 }
 
