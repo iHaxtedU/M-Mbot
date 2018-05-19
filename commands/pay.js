@@ -38,7 +38,7 @@ module.exports.run = async (bot, message, args) => {
   let complete = new Discord.RichEmbed()
   .setAuthor(bot.user.username, bot.user.avatarURL)
   .setColor("#43ff14")
-  .addField("Transaction Complete", `You Have Payed $<@{pUser}> ${args[1]} M&M's`);
+  .addField("Transaction Complete", `You Have Payed ${pUser.user.username} ${args[1]} M&M's`);
   
   message.channel.send(complete);
 
