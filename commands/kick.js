@@ -5,7 +5,7 @@ module.exports.run = async (bot, message, args) => {
   if(!kUser) return message.channel.send("Can't Find User!");
   let kReason = args.join(" ").slice(22);
   if(!message.member.hasPermission("KICK_MEMBERS")) return message.channel.send("You Do Not Have This Permission");
-  if(kUser.hasPermission("KICK_MEMBERS_")) return message.channel.send("Aye Crackhead That Person Can't Be Kicked");
+  if(kUser.hasPermission("KICK_MEMBERS")) return message.channel.send("Aye Crackhead That Person Can't Be Kicked");
 
   let msg = new Discord.RichEmbed()
   .setAuthor(bot.user.username, bot.user.avatarURL)
