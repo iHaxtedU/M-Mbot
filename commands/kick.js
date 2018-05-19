@@ -10,9 +10,7 @@ module.exports.run = async (bot, message, args) => {
   let msg = new Discord.RichEmbed()
   .setAuthor(bot.user.username, bot.user.avatarURL)
   .setColor("#32ff00")
-  .addField("Kick Success", `You Kicked ${kUser} For ${kReason}`)
-  
-  message.channel.send(msg);
+  .addField("Kick Success", `You Kicked ${kUser} For ${kReason}`);
 
   let kickEmbed = new Discord.RichEmbed()
   .setDescription("Kick Logged")
@@ -28,11 +26,13 @@ module.exports.run = async (bot, message, args) => {
 
 try {
  kUser.send(`You Were Kicked From MMMHub For ${kReason} Don't Do It Again...`);
- wait(5000).then.kUser.kick;
+ kickChannel.send(kickEmbed);
+ message.channel.send(msg);
+ kUser.kick();
     } catch (e) {
         console.error(e);
     }
-  kickChannel.send(kickEmbed);
+
 }
 
 module.exports.help = {
