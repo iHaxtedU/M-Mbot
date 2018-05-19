@@ -55,6 +55,11 @@ bot.on("message", async message => {
 
   let commandfile = bot.commands.get(cmd.slice(prefix.length));
   if(commandfile)commandfile.run(bot,message,args);
+  
+  bot.on("guildMemberAdd" ,(message, member) => {
+    member.send("Hi! Welcome to the MMMHub! If you enjoy are marketplaces, you can purchase M&Ms for Synbucks! (Must Have Synapse)")
+  }
+});
  
 });
 
