@@ -58,7 +58,7 @@ bot.on("message", async message => {
   
   bot.on("guildMemberAdd" ,(message, member) => {
     member.send("Hi! Welcome to the MMMHub! If you enjoy are marketplaces, you can purchase M&Ms for Synbucks! (Must Have Synapse)")
-  }
+  });
 });
  
 });
