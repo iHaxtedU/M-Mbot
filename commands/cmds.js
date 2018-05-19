@@ -9,7 +9,10 @@ let help = new Discord.RichEmbed()
 .addField("!ping", "Used To Check The Response Time On The Bot")
 .addField("!bal", "Check How Many M&M's You Have")
 .addField("!pay (USER) (AMT)", "Use This Command To Pay Someone M&M's")
-.addField("!contact", "Admins Can Use This To Contact Someone Using The Bot");
+.addField("!contact", "Admins Can Use This To Contact Someone Using The Bot")
+.addField("!give (USER) (AMT)", "Give A User M&M's")
+.addField("!take (USER) (AMT)", "Remove A User's M&M's")
+.addField("!kick", "Kick A User");
 
 message.channel.send(help);
 }
