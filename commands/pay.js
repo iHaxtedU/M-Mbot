@@ -41,7 +41,14 @@ module.exports.run = async (bot, message, args) => {
   .addField("Transaction Complete", `You Have Payed ${pUser} ${args[1]} M&M's`);
   
   message.channel.send(complete);
-
+  
+  let botlog = new Discord.RichEmbed()
+  .setAuthor(bot.user.username, bot.user.avatarURL)
+  .setColor("#43ff14")
+  .addField("Payment Logged!", `${message.author} Payed ${pUser} ${args[1]} M&M's`);
+  
+  bot.channels.find('name', "bot-logs").send(botlog)
+  
   fs.writeFile("./m&m's.json", JSON.stringify(bal), (err) => {
     if(err) cosole.log(err)
   });
