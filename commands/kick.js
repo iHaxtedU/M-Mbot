@@ -27,13 +27,14 @@ module.exports.run = async (bot, message, args) => {
   if (!kickChannel) return message.channel.send("Error Finding Channel, Please DM @Ez Potato#2648");
 
 try {
- kUser.send(`You Were Kicked From MMMHub For ${kReason} Don't Do It Again");
+ kUser.send(`You Were Kicked From MMMHub For ${kReason} Don't Do It Again!");
  kUser.kick(5000)
     } catch (e) {
         console.error(e);
     }
   kickChannel.send(kickEmbed);
 }
+
 module.exports.help = {
   name: "kick"
 }
