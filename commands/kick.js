@@ -10,7 +10,7 @@ module.exports.run = async (bot, message, args) => {
   let msg = new Discord.RichEmbed()
   .setAuthor(bot.user.username, bot.user.avatarURL)
   .setColor("#32ff00")
-  .addField("Kick Success", `You Kicked" `${kUser} For ${kReason}`)
+  .addField("Kick Success", `You Kicked ${kUser} For ${kReason}`)
   
   message.channel.send(msg);
 
