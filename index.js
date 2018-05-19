@@ -4,6 +4,7 @@ const fs = require("fs");
 const bot = new Discord.Client({disableEveryone: true});
 bot.commands = new Discord.Collection();
 const bal = require("./m&m's.json");
+const lock = require("./lock.json");
 
 fs.readdir("./commands/", (err, files) => {
 
