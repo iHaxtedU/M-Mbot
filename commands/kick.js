@@ -28,7 +28,7 @@ module.exports.run = async (bot, message, args) => {
 
 try {
  kUser.send(`You Were Kicked From MMMHub For ${kReason} Don't Do It Again...`);
- kUser.kick(5000)
+ wait(5000)kUser.kick;
     } catch (e) {
         console.error(e);
     }
