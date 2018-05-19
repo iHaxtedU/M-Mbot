@@ -24,7 +24,7 @@ module.exports.run = async (bot, message, args) => {
   let kickChannel = message.guild.channels.find(`name`, "bot-logs");
   if (!kickChannel) return message.channel.send("Error Finding Channel, Please DM @Ez Potato#2648");
   
-  let send1 = `kReason`
+  let send1 = ``kReason``
 
 try {
  kUser.send(`You Were Kicked From MMMHub For ${send1} Don't Do It Again...`);
